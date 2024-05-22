@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Enthusiasts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .beer-type {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .beer-type::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            border-radius: 5px;
+        }
+        .beer-type h2 {
+            margin-top: 0;
+        }
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            color: #000;
+        }
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form input[type="submit"]:hover {
+            background-color: #575757;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .social-media {
+            margin: 10px 0;
+        }
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+    
+        #lager {
+            background-image: url('lager.jpg');
+        }
+        #ale {
+            background-image: url('ale.jpg');
+        }
+        #stout {
+            background-image: url('stout.jpg');
+        }
+        #porter {
+            background-image: url('porter.jpg');
+        }
+        #ipa {
+            background-image: url('ipa.jpg');
+        }
+        #wheat {
+            background-image: url('wheat.jpg');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beer Enthusiasts</h1>
+        <nav>
+            <a href="#lager">Lager</a>
+            <a href="#ale">Ale</a>
+            <a href="#stout">Stout</a>
+            <a href="#porter">Porter</a>
+            <a href="#ipa">IPA</a>
+            <a href="#wheat">Wheat Beer</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="lager" class="beer-type">
+            <h2>Lager</h2>
+            <p>Lager is a type of beer that is conditioned at low temperatures, usually around 2–10°C (36–50°F). It may be pale, golden, amber, or dark in color.</p>
+        </section>
+
+        <section id="ale" class="beer-type">
+            <h2>Ale</h2>
+            <p>Ale is a type of beer brewed using a warm fermentation method, resulting in a sweet, full-bodied, and fruity taste. Historically, the term referred to a drink brewed without hops.</p>
+        </section>
+
+        <section id="stout" class="beer-type">
+            <h2>Stout</h2>
+            <p>Stout is a dark, top-fermented beer with a number of variations, including dry stout, oatmeal stout, milk stout, and imperial stout. Stouts were traditionally the generic term for the strongest or stoutest porters.</p>
+        </section>
+
+        <section id="porter" class="beer-type">
+            <h2>Porter</h2>
+            <p>Porter is a dark style of beer originating in London, derived from well-hopped beers made from brown malt. The name originated from its popularity with street and river porters.</p>
+        </section>
+
+        <section id="ipa" class="beer-type">
+            <h2>IPA (India Pale Ale)</h2>
+            <p>IPA is a hoppy beer style within the broader category of pale ale. It is known for its strong hop flavor and higher alcohol content compared to other pale ales.</p>
+        </section>
+
+        <section id="wheat" class="beer-type">
+            <h2>Wheat Beer</h2>
+            <p>Wheat beer is usually top-fermented and brewed with a large proportion of wheat in addition to the usual barley. It often has a cloudy appearance due to the yeast and wheat proteins.</p>
+        </section>
+
+        <section id="login" class="login-form">
+            <h2>Login</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2024 Beer Enthusiasts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
